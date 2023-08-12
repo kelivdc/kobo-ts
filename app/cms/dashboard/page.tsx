@@ -7,7 +7,7 @@ function Dashboard() {
     return (
         <>
             <h1>Dashboard</h1>
-            <div>{JSON.stringify(session.jwt)}</div>
+            <div>{JSON.stringify(session?.jwt)}</div>
         </>
     )
 }
