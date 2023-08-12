@@ -12,8 +12,7 @@ export const authOptions = {
                 password: { label: 'Password', type: 'password' }
             },
             async authorize(credentials) {
-               
-                const res = await axios.get(process.env.API_URL + "/token/?format=json", {
+                const res = await axios.get(process.env.SOURCE_URL + "/token/?format=json", {
                     headers: {
                         'Content-Type': 'application/json'
                     },

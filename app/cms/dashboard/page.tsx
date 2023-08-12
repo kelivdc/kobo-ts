@@ -1,13 +1,14 @@
 'use client'
+import Panel from '@/components/Panel'
 import { useSession } from 'next-auth/react'
 import React from 'react'
 
 function Dashboard() {
-    const { data: session } = useSession()
     return (
         <>
+        <Panel title="Dashboard">
             <h1>Dashboard</h1>
-            <div>{JSON.stringify(session?.jwt)}</div>
+        </Panel>
         </>
     )
 }
