@@ -7,7 +7,7 @@ export default function Sidebar() {
             <div className="flex h-full flex-col overflow-y-auto border-r border-slate-400  backdrop-blur-sm bg-white/30 px-3 py-4">
                 <div href="#" className="mb-10 flex items-center rounded-lg px-3 py-2 text-white dark:text-white">
                     <svg className="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-command"><path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" /></svg>
-                    <span className="ml-3 text-base font-semibold">KOBO analytic</span>
+                    <span className="ml-3 text-base font-semibold">KOBO App</span>
                 </div>
                 <ul className="space-y-2 text-sm font-medium">
                     <li>
