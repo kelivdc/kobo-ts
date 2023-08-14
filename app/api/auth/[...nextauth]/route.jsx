@@ -37,15 +37,9 @@ export const authOptions = {
         strategy: "jwt",
     },
     pages: {
-        signIn: "/",
-        signOut: '/auth/signout',
+        signIn: "/",      
         error: '/auth/error'
-    },
-    events: {
-        async signOut(token, session) {
-            redirect('/auth/signout')
-        }
-    },
+    },   
     callbacks: {        
         async session({ session, token}) {            
             session.id = token.id
