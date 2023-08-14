@@ -20,8 +20,6 @@ import Link from 'next/link'
 export default function Assets() {
   const { data: session } = useSession()
   const [assets, setAssets] = useState([])
-  const [isOpen, SetIsOpen] = useState(true)
-  const [uid, setUid] = useState(null)
   const [isLoading, setLoading] = useState(true);
 
   const selectUid = (uid) => {
@@ -66,7 +64,6 @@ export default function Assets() {
         })
         setAssets(arrResult)
       }
-      setLoading(false);
       getAssets()
     }
   }, [session])
@@ -84,10 +81,7 @@ export default function Assets() {
 
   return (
     <>
-      <Panel title="Assets">
-        {isLoading ? (
-          <Skeleton className="w-[100px] h-[20px] rounded-full" />
-        ) : (
+      <Panel title="Assets">      
           <Table>
             <TableHeader>
               <TableRow>
@@ -114,7 +108,6 @@ export default function Assets() {
               ))}
             </TableBody>
           </Table>
-        )}
       </Panel>
     </>
   )
