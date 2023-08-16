@@ -1,0 +1,10 @@
+.p-datatable-table {
+  @apply text-[12px];
+}
+.kolomHeader {
+  background-color: #c0c0c0;
+  max-width: 200px;
+}
+.p-column-title {
+  @apply line-clamp-3;
+}

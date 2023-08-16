@@ -14,13 +14,12 @@ import { useSession } from 'next-auth/react'
 import { useState, useEffect } from "react"
 import moment from 'moment'
 import { Button } from "@/components/ui/button"
-import { Skeleton } from "@/components/ui/skeleton"
 import Link from 'next/link'
 
 export default function Assets() {
   const { data: session } = useSession()
   const [assets, setAssets] = useState([])
-  const [isLoading, setLoading] = useState(true);
+  const [uid, setUid] = useState(true);
 
   const selectUid = (uid) => {
     setUid(uid);
@@ -42,7 +41,7 @@ export default function Assets() {
             }
           })
           const data = await resp.json()
-          return data['Count']
+          return data
         } catch {
           return 0
         }
