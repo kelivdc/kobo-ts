@@ -63,7 +63,7 @@ export default function Detail({ params }) {
   return (
     <Panel title="Results">
       <ScrollPanel style={{ width: '100%', height: '100%' }}>
-        <DataTable value={records} globalFilterFields={Keys} reorderableColumns showGridlines tableStyle={{ minWidth: '200px' }} onRowReorder={handleRow}>
+        <DataTable value={records} resizableColumns globalFilterFields={Keys} paginator rows={10} rowsPerPageOptions={[10, 25, 50]} reorderableColumns showGridlines tableStyle={{ minWidth: '30rem' }}>
           {survey.map((item) => (
             item['name'] === "start" || item['name'] === "selesai" ? (
               <Column key={item['name']} field={item['name']} header={item['label'][0]} bodyStyle={{ minWidth: '200px' }} body={formatTanggal} sortable></Column>
